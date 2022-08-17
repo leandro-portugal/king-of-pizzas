@@ -14,7 +14,11 @@ body {
 }
 h1{
 
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 30px;
     color: #CE3737;
+    padding-bottom: 15px;
 }
 header {
     position: fixed;
@@ -169,7 +173,7 @@ h1 {
 .pizzaInfo h1 {
     margin-top:50px;
 }
-.pizzaInfo .pizzaInfo--disc {
+.pizzaInfo .pizzaInfo--desc {
     font-size:15px;
     color:#999;
     margin-top:10px;
@@ -199,7 +203,7 @@ h1 {
     background-color:#CCC;
 }
 .pizzaInfo--size.selected {
-    background-color:#399ade;
+    background-color:#CE3737;
     color:#FFF;
 }
 .pizzaInfo--size.selected span {
@@ -244,7 +248,7 @@ h1 {
     margin-top:30px;
     padding:20px 30px;
     border-radius:20px;
-    background-color:#48d05f;
+    background-color:#369247;
     color:#FFF;
     display:inline-block;
     cursor:pointer;
@@ -254,8 +258,14 @@ h1 {
     background-color:#32a345;
 }
 .pizzaInfo--cancelButton {
+    margin-top:30px;
+    padding:20px 30px;
+    border-radius:20px;
+    background-color:#CE3737;
+    color:#FFF;
     display:inline-block;
     cursor:pointer;
+    margin-right:30px;
 }
 .pizzaInfo--cancelMobileButton {
     display:none;
