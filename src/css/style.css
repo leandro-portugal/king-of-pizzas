@@ -331,16 +331,15 @@ h1 {
 .cart--finish {
     padding:20px 30px;
     border-radius:20px;
-    background-color:#48d05f;
+    background-color:#308B57;
     color:#FFF;
     cursor:pointer;
     text-align:center;
     margin-top:20px;
-    border:2px solid #63f77c;
     transition: all ease .2s;
 }
 .cart--finish:hover {
-    background-color:#35af4a;
+    background-color:#04380d;
 }
 
 @media (max-width:1000px) {
