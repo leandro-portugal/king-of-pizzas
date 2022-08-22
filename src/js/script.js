@@ -122,14 +122,29 @@ qs('.pizzaInfo--addButton').addEventListener('click', () => {
 
 });
 
+qs('.menu-openner').addEventListener('click', () => {
+
+  if (cart.length > 0) {
+
+    qs('aside').style.left = '0';
+  }
+
+});
+
+qs('.menu-closer').addEventListener('click', ()=>{
+
+  qs('aside').style.left = '100vw';
+});
+
 function updateCart() {
+  qs('.menu-openner span').innerHTML = cart.length;
 
   if (cart.length > 0) {
 
     qs('aside').classList.add('show');
     qs('.cart').innerHTML = '';
 
-    
+
     let subtotal = 0;
     let discount = 0;
     let total = 0;
@@ -138,11 +153,10 @@ function updateCart() {
 
       let pizzaItem = pizzaJson.find((item) => item.id == cart[i].id);
       subtotal += pizzaItem.price[cart[i].size] * cart[i].quantity;
-      
-      console.log(subtotal);
+
       let cartItem = qs('.models .cart--item').cloneNode(true);
       let pizzaSizeName;
-     
+
       switch (cart[i].size) {
         case 0:
           pizzaSizeName = 'Pequena';
@@ -188,13 +202,17 @@ function updateCart() {
 
       qs('.cart').append(cartItem);
     }
+
     discount = subtotal * 0.1;
     total = subtotal - discount;
+
     qs('.subtotal span:last-child').innerHTML = `R$ ${subtotal.toFixed(2)}`;
     qs('.discount span:last-child').innerHTML = `R$ ${discount.toFixed(2)}`;
     qs('.total span:last-child').innerHTML = `R$ ${total.toFixed(2)}`;
+
   } else {
 
     qs('aside').classList.remove('show');
+    qs('aside').style.left = '100vw';
   }
 }
